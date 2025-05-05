@@ -1,22 +1,21 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import {
   CdkDragDrop,
-  moveItemInArray,
-  transferArrayItem,
   CdkDrag,
   CdkDropList,
 } from '@angular/cdk/drag-drop';
 import { Task } from '../../../../domain/api/models/tasks.model';
 import { TaskStatus } from '../../../../shared/core/enums/tasks.enum';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-drag-drop',
   standalone: true,
   templateUrl: './drag-drop.component.html',
   styleUrls: ['./drag-drop.component.scss'],
-  imports: [CdkDropList, NgFor, CdkDrag, MatIconModule],
+  imports: [CdkDropList, NgFor, CdkDrag, MatIconModule, CommonModule, MatButtonModule],
 })
 export class DragDropComponent {
   @Input() enabledToassign!: boolean;

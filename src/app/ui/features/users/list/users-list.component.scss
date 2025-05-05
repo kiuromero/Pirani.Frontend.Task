@@ -5,6 +5,8 @@
   }
   
   .card-title.users-title {
-    margin-bottom: 10px; /* Asegura que haya espacio adecuado entre el título y el botón */
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px; 
   }
   

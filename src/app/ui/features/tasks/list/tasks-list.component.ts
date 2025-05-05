@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
 import {
   CdkDrag,
   CdkDropList,
@@ -17,6 +17,7 @@ import { TasksCreateComponent } from '../create/tasks-create.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { DragDropComponent } from '../drag-drop/drag-drop.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-tasks-list',
@@ -24,13 +25,15 @@ import { DragDropComponent } from '../drag-drop/drag-drop.component';
   templateUrl: './tasks-list.component.html',
   styleUrls: ['./tasks-list.component.scss'],
   imports: [
+    CommonModule,
     CdkDropList,
     NgFor,
     CdkDrag,
     MatCardModule,
     MatIconModule,
+    MatButtonModule,
     DragDropModule,
-    DragDropComponent, // Importar el componente DragDropComponent
+    DragDropComponent, 
   ],
 })
 export class TasksListComponent {
